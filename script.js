@@ -78,3 +78,46 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize first slide
   showSlide(0);
 });
+// FAQ accordion functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+
+            // Remove active class from all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Add active class to the clicked FAQ item
+            faqItem.classList.add('active');
+        });
+    });
+
+    // Services interaction
+    const serviceCards = document.querySelectorAll('.service-card');
+    const previewContents = document.querySelectorAll('.preview-content');
+
+    serviceCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const serviceIndex = this.dataset.service;
+
+            // Remove active class from all cards
+            serviceCards.forEach(c => c.classList.remove('active'));
+
+            // Add active class to clicked card
+            this.classList.add('active');
+
+            // Hide all preview contents
+            previewContents.forEach(content => content.classList.remove('active'));
+
+            // Show the corresponding preview content
+            const targetPreview = document.querySelector(`.preview-content[data-preview="${serviceIndex}"]`);
+            if (targetPreview) {
+                targetPreview.classList.add('active');
+            }
+        });
+    });
+
+    
