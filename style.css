@@ -332,7 +332,41 @@ header::before {
   gap: 2rem;
   margin-top: 3rem;
 }
+/* Tech Marquee */
+.tech-marquee {
+    overflow: hidden;
+    margin-top: 3rem;
+    background: linear-gradient(135deg, #f0f0f0 0%, #ADD8E6 100%);
+    padding: 1rem 0;
+    border-radius: 10px;
+}
 
+.marquee-content {
+    display: flex;
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+}
+
+.marquee-content span {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2133d6;
+    margin: 0 2rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 .pricing-card {
   background: white;
   border-radius: 20px;
@@ -1055,4 +1089,5 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #5a67d8, #6b46c1);
 }
+
 
