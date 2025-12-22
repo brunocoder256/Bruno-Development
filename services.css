@@ -1,0 +1,442 @@
+/* Services */
+.services-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+    align-items: start;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2e1adb;
+    font-size: 250%;
+}
+
+.service-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.service-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #570c9c 0%, #2633e4 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 20s ease infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.service-card:hover::before,
+.service-card.active::before {
+    opacity: 1;
+}
+
+.service-card:hover,
+.service-card.active {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.service-card.active {
+    background: linear-gradient(135deg, #42037c 0%, #1834cf 100%);
+    color: #fff;
+}
+
+.service-card.active .service-icon i {
+    color: #fff;
+}
+
+.service-card.active h3,
+.service-card.active p {
+    color: #fff;
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: #173ad6;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon,
+.service-card.active .service-icon {
+    transform: scale(1.1);
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.preview-panel {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: sticky;
+    top: 2rem;
+}
+
+.preview-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.preview-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.preview-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.preview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.preview-content.active .preview-image img {
+    animation: imageSlideIn 0.8s ease-out;
+}
+
+.preview-details {
+    padding: 2.5rem;
+}
+
+.animated-headline {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #161ae0;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.animated-headline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1e2bdb, #550894);
+    animation: underlineExpand 0.8s ease-out 0.3s forwards;
+}
+
+.preview-description {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.preview-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.preview-features li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #333;
+    font-weight: 500;
+}
+
+.preview-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #1d30db;
+    font-weight: bold;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tech-stack span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    font-size: 1.5rem;
+    color: #3033e4;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tech-stack span:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.tech-logos-marquee {
+    margin-top: 4rem;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem 0;
+    border-radius: 15px;
+}
+
+.logos-content {
+    display: flex;
+    animation: logosMarquee 30s linear infinite;
+    white-space: nowrap;
+}
+
+.logos-content span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 1rem;
+    background: #fff;
+    border-radius: 15px;
+    font-size: 2rem;
+    color: #1529e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.logos-content span:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Skeuomorphic style for service section buttons */
+#services .cta-button {
+    background: linear-gradient(135deg, #0e11c4 0%, #0717a1 50%, #a84ce6 100%);
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.2), /* soft outer shadow */
+        inset 0 1px 0 rgba(255, 255, 255, 0.3), /* subtle inner highlight */
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1); /* gentle inner shadow */
+    position: relative;
+}
+
+#services .cta-button:hover {
+    background: linear-gradient(135deg, #9439df 0%, #5916d6 50%, #0e058d 100%);
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.3), /* reduced outer shadow on hover */
+        inset 0 1px 0 rgba(255, 255, 255, 0.4), /* enhanced inner highlight */
+        inset 0 -2px 0 rgba(0, 0, 0, 0.2); /* deeper inner shadow for pressed effect */
+    transform: translateY(1px); /* slight press down */
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes imageSlideIn {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes underlineExpand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100px;
+    }
+}
+
+@keyframes logosMarquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .services-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .preview-panel {
+        position: static;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .service-cards {
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+
+    .preview-panel {
+        position: static;
+        margin-top: 2rem;
+    }
+
+    .preview-image {
+        height: 200px;
+    }
+
+    .preview-details {
+        padding: 1.5rem;
+    }
+
+    .animated-headline {
+        font-size: 1.8rem;
+    }
+
+    .preview-description {
+        font-size: 1rem;
+    }
+
+    .tech-stack span {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .tech-logos-marquee {
+        margin-top: 3rem;
+        padding: 1.5rem 0;
+    }
+
+    .logos-content span {
+        width: 50px;
+        height: 50px;
+        margin: 0 0.8rem;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        padding: 1rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-card p {
+        font-size: 0.85rem;
+    }
+
+    .preview-image {
+        height: 150px;
+    }
+
+    .preview-details {
+        padding: 1rem;
+    }
+
+    .animated-headline {
+        font-size: 1.5rem;
+    }
+
+    .preview-description {
+        font-size: 0.9rem;
+    }
+
+    .tech-stack span {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .tech-logos-marquee {
+        margin-top: 2rem;
+        padding: 1rem 0;
+    }
+
+    .logos-content span {
+        width: 40px;
+        height: 40px;
+        margin: 0 0.6rem;
+        font-size: 1.5rem;
+    }
+}
