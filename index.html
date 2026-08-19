@@ -1,684 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Professional web designer and developer in Kampala, Uganda. Specializing in modern, responsive websites for schools, churches, businesses, and creatives.">
-  <meta name="keywords" content="web design, web development, website designer, Uganda, Kampala, responsive websites, school websites, church websites, e-commerce, branding, UI design">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="Bruno Development Works — modern websites, web systems and digital experiences engineered for speed, mobile responsiveness and growth in Uganda.">
+  <meta name="keywords" content="web developer Uganda, website design Kampala, web development Uganda, responsive websites, school websites, business websites, e-commerce Uganda, Bruno Development Works">
   <meta name="author" content="Bruno Development Works">
   <meta name="robots" content="index, follow">
-
-  <!-- Canonical URL -->
   <link rel="canonical" href="https://brunodevworks.online">
-
-  <!-- Open Graph Tags -->
-  <meta property="og:title" content="Bruno Development Works - Web Designer & Developer">
-  <meta property="og:description" content="Professional web designer and developer in Kampala, Uganda. Creating modern, responsive websites for schools, churches, businesses, and creatives.">
-  <meta property="og:image" content="https://brunodevworks.online/logo.png">
-  <meta property="og:url" content="https://brunodevworks.online">
+  <meta property="og:title" content="Bruno Development Works | Websites That Work">
+  <meta property="og:description" content="High-performance websites and digital systems built to look sharp, load fast and convert visitors into customers.">
+  <meta property="og:image" content="hero-dev.jpg">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Bruno Development Works">
-
-  <!-- Twitter Card Tags -->
+  <meta property="og:url" content="https://brunodevworks.online">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Bruno Development Works - Web Designer & Developer">
-  <meta name="twitter:description" content="Professional web designer and developer in Kampala, Uganda. Creating modern, responsive websites for schools, churches, businesses, and creatives.">
-  <meta name="twitter:image" content="https://brunodevworks.online/logo.png">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Bruno Development Works",
-    "description": "Professional web design and development services in Kampala, Uganda. Specializing in modern, responsive websites for schools, churches, businesses, and creatives.",
-    "url": "https://brunodevworks.online",
-    "logo": "https://brunodevworks.online/logo.png",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Kampala",
-      "addressCountry": "UG"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+256-768-082-948",
-      "contactType": "Customer Service",
-      "availableLanguage": "English"
-    },
-    "sameAs": [
-      "https://www.facebook.com/yourpage",
-      "https://www.instagram.com/yourusername",
-      "https://www.linkedin.com/in/yourprofile"
-    ],
-    "serviceType": ["Web Design", "Web Development", "Branding", "E-commerce"],
-    "areaServed": "Uganda"
-  }
-  </script>
-
+  <title>Bruno Development Works — Websites That Work.</title>
+  <link rel="icon" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
-  <link rel="apple-touch-icon" href="logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="faq.css">
-  <link rel="stylesheet" href="how-we-work.css">
-  <link rel="stylesheet" href="services.css">
-  <link rel="stylesheet" href="why-choose-us.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <title>Bruno Development Works</title>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"Bruno Development Works",
+    "url":"https://brunodevworks.online",
+    "description":"Web design, web development and digital systems in Uganda.",
+    "areaServed":"Uganda",
+    "address":{"@type":"PostalAddress","addressLocality":"Kampala","addressCountry":"UG"},
+    "telephone":"+256-768-082-948",
+    "email":"brunocoder13@gmail.com",
+    "priceRange":"UGX 300,000+"
+  }
+  </script>
 </head>
 <body>
+  <div class="noise"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-  <header>
-    <div class="header-container">
-      <div class="logo-section">
-        <img src="logo.png" alt="Logo" class="logo">
-      </div>
-      <div class="title-section">
-        <h1>Bruno Development</h1>
-        <p>Web Designer • Web Developer • Digital Creator</p>
-      </div>
-      <div class="nav-section">
-        <nav>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Bruno Development Works home">
+      <span class="brand-mark">BD<span>/</span>W</span>
+      <span class="brand-copy"><strong>BRUNO</strong><small>DEVELOPMENT WORKS</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="mainNav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Start a project <span>↗</span></a>
+    </nav>
   </header>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <div class="about-image">
-        <img src="logo.png" alt="Professional Logo" class="about-logo">
-      </div>
-      <div class="about-text">
-        <p class="about-intro">
-          We are professional web designers and developers who build modern, responsive, and visually stunning websites for schools, churches, businesses, and creatives.
-        </p>
-        <div class="persuasive-points">
-          <div class="point">
-            <h4>✨ 5+ Years of Excellence</h4>
-            <p>Delivering cutting-edge digital solutions that drive results and exceed expectations.</p>
-          </div>
-          <div class="point">
-            <h4>🎯 100% Client Satisfaction</h4>
-            <p>Committed to perfection with every project, ensuring your vision becomes reality.</p>
-          </div>
-          <div class="point">
-            <h4>🚀 Innovative & Modern</h4>
-            <p>Staying ahead of trends with the latest technologies and design principles.</p>
-          </div>
-          <div class="point">
-            <h4>💼 Trusted by Industry Leaders</h4>
-            <p>Proven track record with schools, churches, and businesses across the region.</p>
-          </div>
+  <main>
+    <section class="hero section-grid" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> AVAILABLE FOR NEW PROJECTS · UGANDA</div>
+        <h1>WE BUILD<br><span class="outline">DIGITAL</span><br>THAT <span class="accent">WORKS.</span></h1>
+        <p class="hero-lead">Modern websites and digital systems engineered to look premium, load fast and turn attention into action.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contact">Build my website <span>↗</span></a>
+          <a class="button button-ghost" href="#work">See selected work <span>↓</span></a>
+        </div>
+        <div class="hero-metrics">
+          <div><strong data-count="20">0</strong><span>+ projects</span></div>
+          <div><strong data-count="100">0</strong><span>% responsive</span></div>
+          <div><strong data-count="24">0</strong><span>/7 digital presence</span></div>
         </div>
       </div>
-    </div>
-    <div class="tech-marquee">
-                <div class="marquee-content">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>Django</span>
-                    <span>Python</span>
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>PostgreSQL</span>
-                    <span>Git</span>
-                    <span>Bootstrap</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>Django</span>
-                    <span>Python</span>
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>MySQL</span>
-                    <span>Git</span>
-                    <span>Bootstrap</span>
-                </div>
-            </div>
-  </section>
 
-<section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-layout">
-                <div class="service-cards">
-                    <div class="service-card active" data-service="0">
-                        <div class="service-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <h3>Website Design</h3>
-                        <p>Modern, responsive websites tailored to your brand.</p>
-                    </div>
-                    <div class="service-card" data-service="1">
-                        <div class="service-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3>System Design</h3>
-                        <p>Efficient and scalable system architectures.</p>
-                    </div>
-                    <div class="service-card" data-service="2">
-                        <div class="service-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3>App Design</h3>
-                        <p>User-friendly mobile and web applications.</p>
-                    </div>
-                </div>
-                <div class="preview-panel">
-                    <div class="preview-content active" data-preview="0">
-                        <div class="preview-image">
-                            <img src="creative.jpg" alt="Website Design Preview">
-                        </div>
-                        <div class="preview-details">
-                            <h3 class="animated-headline">Website Design</h3>
-                            <p class="preview-description">We create stunning, modern websites that not only look beautiful but also perform exceptionally. Our designs are fully responsive, SEO-optimized, and built with the latest technologies.</p>
-                            <ul class="preview-features">
-                                <li>Custom responsive design</li>
-                                <li>SEO optimization</li>
-                                <li>Performance optimization</li>
-                                <li>Cross-browser compatibility</li>
-                            </ul>
-                            <div class="tech-stack">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fab fa-react"></i></span>
-                            </div>
-                            <a href="#contact" class="cta-button">Get Started</a>
-                        </div>
-                    </div>
-                    <div class="preview-content" data-preview="1">
-                        <div class="preview-image">
-                            <img src="Buiding apps.jpg" alt="System Design Preview">
-                        </div>
-                        <div class="preview-details">
-                            <h3 class="animated-headline">System Design</h3>
-                            <p class="preview-description">Our system design services focus on building robust, scalable architectures that can handle your business needs. We ensure security, performance, and maintainability in every solution.</p>
-                            <ul class="preview-features">
-                                <li>Scalable architecture design</li>
-                                <li>Database optimization</li>
-                                <li>Security implementation</li>
-                                <li>API development</li>
-                            </ul>
-                            <div class="tech-stack">
-                                <span><i class="fab fa-python"></i></span>
-                                <span><i class="fas fa-database"></i></span>
-                                <span><i class="fab fa-docker"></i></span>
-                                <span><i class="fab fa-aws"></i></span>
-                            </div>
-                            <a href="#contact" class="cta-button">Get Started</a>
-                        </div>
-                    </div>
-                    <div class="preview-content" data-preview="2">
-                        <div class="preview-image">
-                            <img src="design.jpg" alt="App Design Preview">
-                        </div>
-                        <div class="preview-details">
-                            <h3 class="animated-headline">App Design</h3>
-                            <p class="preview-description">We design intuitive mobile and web applications that provide exceptional user experiences. From concept to deployment, we handle every aspect of app development.</p>
-                            <ul class="preview-features">
-                                <li>UI/UX design</li>
-                                <li>Cross-platform development</li>
-                                <li>App store optimization</li>
-                                <li>Maintenance & support</li>
-                            </ul>
-                            <div class="tech-stack">
-                                <span><i class="fab fa-react"></i></span>
-                                <span><i class="fab fa-node-js"></i></span>
-                                <span><i class="fab fa-apple"></i></span>
-                                <span><i class="fab fa-android"></i></span>
-                            </div>
-                            <a href="#contact" class="cta-button">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tech-logos-marquee">
-                <div class="logos-content">
-                    <span><i class="fab fa-html5"></i></span>
-                    <span><i class="fab fa-css3-alt"></i></span>
-                    <span><i class="fab fa-js-square"></i></span>
-                    <span><i class="fab fa-python"></i></span>
-                    <span><i class="fab fa-react"></i></span>
-                    <span><i class="fab fa-node-js"></i></span>
-                    <span><i class="fab fa-docker"></i></span>
-                    <span><i class="fab fa-aws"></i></span>
-                    <span><i class="fab fa-git-alt"></i></span>
-                    <span><i class="fab fa-bootstrap"></i></span>
-                    <span><i class="fab fa-html5"></i></span>
-                    <span><i class="fab fa-css3-alt"></i></span>
-                    <span><i class="fab fa-js-square"></i></span>
-                    <span><i class="fab fa-python"></i></span>
-                    <span><i class="fab fa-react"></i></span>
-                    <span><i class="fab fa-node-js"></i></span>
-                    <span><i class="fab fa-docker"></i></span>
-                    <span><i class="fab fa-aws"></i></span>
-                    <span><i class="fab fa-git-alt"></i></span>
-                    <span><i class="fab fa-bootstrap"></i></span>
-                </div>
-            </div>
+      <div class="hero-visual reveal reveal-delay-1">
+        <div class="code-orbit orbit-one"></div>
+        <div class="code-orbit orbit-two"></div>
+        <div class="hero-image-wrap">
+          <div class="image-glow"></div>
+          <img src="hero-dev.jpg" alt="Bruno working on a laptop in a modern development studio" class="hero-image active" id="heroImageA">
+          <img src="hero-dev-laptop.jpg" alt="Bruno focused on his laptop while coding" class="hero-image" id="heroImageB">
+          <div class="image-tag"><span>01</span> BUILDER MODE</div>
         </div>
+        <div class="terminal-card">
+          <div class="terminal-top"><span></span><span></span><span></span><b>bruno.dev</b></div>
+          <pre><code><span class="t-muted">const</span> <span class="t-white">website</span> = {
+  <span class="t-green">speed</span>: <span class="t-number">100</span>,
+  <span class="t-green">mobile</span>: <span class="t-bool">true</span>,
+  <span class="t-green">seo</span>: <span class="t-bool">true</span>,
+  <span class="t-green">impact</span>: <span class="t-string">"built-in"</span>
+};</code></pre>
+        </div>
+      </div>
     </section>
 
-  <section id="pricing" class="section">
-    <h2>Pricing</h2>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <div class="pricing-header">
-          <div class="pricing-icon">🏢</div>
-          <h3>Small Business Website</h3>
-        </div>
-        <div class="pricing-price">
-          <span class="price-range">UGX 300k – 700k</span>
-        </div>
-        <ul class="pricing-features">
-          <li>Responsive Design</li>
-          <li>Up to 5 Pages</li>
-          <li>Contact Form</li>
-          <li>Basic SEO Setup</li>
-          <li>1 Year Hosting</li>
-        </ul>
-        <a href="#contact" class="pricing-btn">Get Started</a>
-      </div>
-
-      <div class="pricing-card">
-        <div class="pricing-header">
-          <div class="pricing-icon">🏫</div>
-          <h3>School Website</h3>
-        </div>
-        <div class="pricing-price">
-          <span class="price-range">UGX 700k – 1.5M</span>
-        </div>
-        <ul class="pricing-features">
-          <li>Advanced CMS System</li>
-          <li>Student Portal</li>
-          <li>Admin Dashboard</li>
-          <li>Event Calendar</li>
-          <li>Payment Integration</li>
-        </ul>
-        <a href="#contact" class="pricing-btn">Get Started</a>
-      </div>
-
-      <div class="pricing-card">
-        <div class="pricing-header">
-          <div class="pricing-icon">⛪</div>
-          <h3>Church Website</h3>
-        </div>
-        <div class="pricing-price">
-          <span class="price-range">UGX 400k – 900k</span>
-        </div>
-        <ul class="pricing-features">
-          <li>Sermon Archive</li>
-          <li>Event Management</li>
-          <li>Donation System</li>
-          <li>Community Features</li>
-          <li>Mobile Optimized</li>
-        </ul>
-        <a href="#contact" class="pricing-btn">Get Started</a>
-      </div>
-
-      <div class="pricing-card featured">
-        <div class="pricing-header">
-          <div class="pricing-icon">🛒</div>
-          <h3>E-commerce Site</h3>
-        </div>
-        <div class="pricing-price">
-          <span class="price-range">UGX 800k – 3M</span>
-        </div>
-        <ul class="pricing-features">
-          <li>Full E-commerce Platform</li>
-          <li>Payment Gateway</li>
-          <li>Inventory Management</li>
-          <li>Analytics Dashboard</li>
-          <li>Multi-vendor Support</li>
-        </ul>
-        <a href="#contact" class="pricing-btn">Get Started</a>
+    <div class="tech-strip" aria-label="Technology stack">
+      <div class="marquee-track">
+        <span>HTML5</span><i>✦</i><span>CSS3</span><i>✦</i><span>JAVASCRIPT</span><i>✦</i><span>RESPONSIVE UI</span><i>✦</i><span>SEO</span><i>✦</i><span>WEB SYSTEMS</span><i>✦</i><span>PERFORMANCE</span><i>✦</i>
+        <span>HTML5</span><i>✦</i><span>CSS3</span><i>✦</i><span>JAVASCRIPT</span><i>✦</i><span>RESPONSIVE UI</span><i>✦</i><span>SEO</span><i>✦</i><span>WEB SYSTEMS</span><i>✦</i><span>PERFORMANCE</span><i>✦</i>
       </div>
     </div>
-  </section>
 
-  <section id="portfolio" class="section">
-    <h2>Portfolio</h2>
-    <div class="portfolio-slider">
-      <div class="slider-container">
-        <div class="slider-wrapper">
-          <div class="slide active">
-            <div class="slide-content">
-              <div class="slide-image">
-                <img src="acknom website.PNG" alt="Website Design Project 1">
-              </div>
-              <div class="slide-info">
-                <h3>E-commerce Platform</h3>
-                <p>Modern responsive e-commerce website with advanced filtering and payment integration.</p>
-                <div class="slide-tags">
-                  <span class="tag">React</span>
-                  <span class="tag">Node.js</span>
-                  <span class="tag">Stripe</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="slide-content">
-              <div class="slide-image">
-                <img src="school website.PNG" alt="Website Design Project 2">
-              </div>
-              <div class="slide-info">
-                <h3>School Management System</h3>
-                <p>Comprehensive school administration platform with student tracking and reporting.</p>
-                <div class="slide-tags">
-                  <span class="tag">PHP</span>
-                  <span class="tag">MySQL</span>
-                  <span class="tag">Bootstrap</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="slide-content">
-              <div class="slide-image">
-                <img src="Rootbrothers website.PNG" alt="Creative Poster Design 1">
-              </div>
-              <div class="slide-info">
-                <h3>Brand Identity Package</h3>
-                <p>Complete branding solution including logo, business cards, and marketing materials.</p>
-                <div class="slide-tags">
-                  <span class="tag">Illustrator</span>
-                  <span class="tag">Photoshop</span>
-                  <span class="tag">Branding</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="slide-content">
-              <div class="slide-image">
-                <img src="church website.PNG" alt="Website Design Project 3">
-              </div>
-              <div class="slide-info">
-                <h3>Church Website</h3>
-                <p>Beautiful spiritual website with event calendar, donation system, and community features.</p>
-                <div class="slide-tags">
-                  <span class="tag">WordPress</span>
-                  <span class="tag">CSS3</span>
-                  <span class="tag">JavaScript</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="slide-content">
-              <div class="slide-image">
-                <img src="postor overnight.png" alt="Creative Poster Design 2">
-              </div>
-              <div class="slide-info">
-                <h3>Event Promotion Posters</h3>
-                <p>Eye-catching promotional materials for concerts, conferences, and special events.</p>
-                <div class="slide-tags">
-                  <span class="tag">Design</span>
-                  <span class="tag">Print</span>
-                  <span class="tag">Marketing</span>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section class="manifesto section" id="about">
+      <div class="section-label">01 / THE APPROACH</div>
+      <div class="manifesto-grid">
+        <div class="manifesto-title reveal"><span>NOT JUST</span><strong>A WEBSITE.</strong><span>A DIGITAL</span><strong>ADVANTAGE.</strong></div>
+        <div class="manifesto-copy reveal reveal-delay-1">
+          <p>People decide whether they trust a business in seconds. Your website should make that decision easy.</p>
+          <p>I combine sharp visual design, clean front-end engineering, responsive layouts, search visibility and conversion-focused structure to create digital experiences that represent you properly.</p>
+          <a href="#services" class="text-link">Explore what I build <span>→</span></a>
         </div>
-        <button class="slider-btn prev-btn" aria-label="Previous slide">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="15,18 9,12 15,6"></polyline>
-          </svg>
-        </button>
-        <button class="slider-btn next-btn" aria-label="Next slide">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="9,18 15,12 9,6"></polyline>
-          </svg>
-        </button>
       </div>
-      <div class="slider-dots">
-        <span class="dot active" data-slide="0"></span>
-        <span class="dot" data-slide="1"></span>
-        <span class="dot" data-slide="2"></span>
-        <span class="dot" data-slide="3"></span>
-        <span class="dot" data-slide="4"></span>
-      </div>
-    </div>
-  </section>
-<section id="faq">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-accordion">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <div class="faq-icon">?</div>
-                        What services do you offer?
-                    </button>
-                    <div class="faq-answer">
-                        <p>We offer a comprehensive range of digital services including website design, system development, mobile app creation, and innovative digital solutions tailored to meet your business needs.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <div class="faq-icon">?</div>
-                        How long does a typical project take?
-                    </button>
-                    <div class="faq-answer">
-                        <p>Project timelines vary depending on complexity and scope. A simple website might take 2-4 weeks, while complex systems could take 2-6 months. We'll provide a detailed timeline during our initial consultation.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <div class="faq-icon">?</div>
-                        Do you provide ongoing support after project completion?
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, we offer comprehensive maintenance and support packages to ensure your digital solutions remain up-to-date, secure, and performing optimally after launch.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <div class="faq-icon">?</div>
-                        What technologies do you use?
-                    </button>
-                    <div class="faq-answer">
-                        <p>We work with modern technologies including HTML, CSS, JavaScript, React, Python, Django, Node.js, PostgreSQL, and more. We choose the best tools for each project's specific requirements.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <div class="faq-icon">?</div>
-                        How do you ensure project quality?
-                    </button>
-                    <div class="faq-answer">
-                        <p>We follow industry best practices with rigorous testing, code reviews, and quality assurance processes. Each project goes through multiple stages of validation before delivery.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <div class="faq-icon">?</div>
-                        Can you work with existing systems?
-                    </button>
-                    <div class="faq-answer">
-                        <p>Absolutely! We can integrate with existing systems, migrate data, or enhance current solutions. We'll assess your current setup and provide recommendations for improvement.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<section id="our-process">
-        <div class="container">
-            <h2>Our Process / How We Work</h2>
-            <div class="process-steps">
-                <div class="step-card">
-                    <div class="step-icon">1</div>
-                    <h3>Discovery</h3>
-                    <p>We start by understanding your vision, goals, and requirements through in-depth consultations and research.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-icon">2</div>
-                    <h3>Design</h3>
-                    <p>Our creative team develops wireframes, mockups, and prototypes that bring your ideas to life with stunning visuals.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-icon">3</div>
-                    <h3>Development</h3>
-                    <p>We build robust, scalable solutions using cutting-edge technologies, ensuring performance and security.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-icon">4</div>
-                    <h3>Delivery</h3>
-                    <p>We deploy your project, provide training, and offer ongoing support to ensure your success.</p>
-                </div>
-            </div>
-        </div>
     </section>
 
-    <section id="why-choose-us">
-        <div class="container">
-            <h2>Why Choose Us</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Experienced Team</h3>
-                    <p>Our skilled professionals bring years of expertise in design and development, ensuring top-notch results for every project.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Innovative Solutions</h3>
-                    <p>We leverage cutting-edge technologies and creative approaches to deliver unique, forward-thinking digital solutions.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Fast Delivery</h3>
-                    <p>We prioritize efficiency without compromising quality, delivering projects on time and within budget.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Quality Assurance</h3>
-                    <p>Rigorous testing and quality checks ensure that every product meets the highest standards of performance and reliability.</p>
-                </div>
-            </div>
-        </div>
+    <section class="services section" id="services">
+      <div class="section-head reveal">
+        <div><div class="section-label">02 / CAPABILITIES</div><h2>WHAT I<br><span>BUILD.</span></h2></div>
+        <p>From a high-converting landing page to a full digital platform, every build is designed around your real business goal.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal"><span class="service-no">01</span><div class="service-icon">⌘</div><h3>Premium Websites</h3><p>Custom business, portfolio, school, church and organization websites that feel modern on every screen.</p><ul><li>Responsive UI</li><li>SEO foundation</li><li>Fast-loading structure</li></ul></article>
+        <article class="service-card featured reveal reveal-delay-1"><span class="service-no">02</span><div class="service-icon">&lt;/&gt;</div><h3>Web Systems</h3><p>Powerful dashboards, portals and custom web applications that turn manual work into structured digital workflows.</p><ul><li>Admin dashboards</li><li>Data-driven interfaces</li><li>Scalable architecture</li></ul></article>
+        <article class="service-card reveal reveal-delay-2"><span class="service-no">03</span><div class="service-icon">◎</div><h3>Digital Growth</h3><p>Make your digital presence easier to find, easier to trust and easier for customers to act on.</p><ul><li>Search optimization</li><li>Conversion structure</li><li>Performance tuning</li></ul></article>
+      </div>
     </section>
-  <section id="contact" class="contact-section">
-    <div class="contact-container">
-        <h2>Contact Me</h2>
-        <p>If you need a website or any digital project, reach out anytime.</p>
 
-        <div class="contact-details">
-            <a href="tel:+256768082948" class="contact-item">
-                <span>📞</span> +256 768082948
-            </a>
-
-            <a href="mailto:brunocoder13@gmail.com" class="contact-item">
-                <span>✉️</span> brunocoder13@gmail.com
-            </a>
-
-            <a href="https://wa.me/256768082948" target="_blank" class="contact-item">
-                <span>💬</span> WhatsApp Chat
-            </a>
-        </div>
-    </div>
-
-    <!-- Floating WhatsApp Icon -->
-    <a href="https://wa.me/256768082948" target="_blank" class="floating-whatsapp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
-</section>
-
-<script src="script.js"></script>
-<footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-grid">
-      <!-- Branding Section -->
-      <div class="footer-section footer-branding">
-        <img src="logo.png" alt="Bruno Development Works Logo" class="footer-logo">
-        <p>Professional web design and development services. Creating modern, responsive websites for schools, churches, businesses, and creatives.</p>
-        <div class="footer-social">
-          <a href="https://www.facebook.com/yourpage" target="_blank" class="social-link" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/yourusername" target="_blank" class="social-link" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-link" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://wa.me/256768082948" target="_blank" class="social-link" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
+    <section class="work section" id="work">
+      <div class="section-head work-head reveal">
+        <div><div class="section-label">03 / SELECTED WORK</div><h2>BUILT FOR<br><span>REAL PEOPLE.</span></h2></div>
+        <div class="filter-bar" role="tablist" aria-label="Project filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="business">Business</button><button class="filter" data-filter="education">Education</button><button class="filter" data-filter="creative">Creative</button></div>
       </div>
-
-      <!-- Quick Links -->
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <div class="projects-grid" id="projectsGrid">
+        <article class="project-card project-large reveal" data-category="business"><div class="project-image"><img src="debobis website.PNG" alt="Debobi's website project"><span class="project-index">01</span></div><div class="project-info"><div><span>BUSINESS / E-COMMERCE</span><h3>Debobi's</h3></div><span class="project-arrow">↗</span></div></article>
+        <article class="project-card reveal reveal-delay-1" data-category="education"><div class="project-image"><img src="school website.PNG" alt="School website project"><span class="project-index">02</span></div><div class="project-info"><div><span>EDUCATION</span><h3>School Digital Presence</h3></div><span class="project-arrow">↗</span></div></article>
+        <article class="project-card reveal reveal-delay-2" data-category="creative"><div class="project-image"><img src="Rootbrothers website.PNG" alt="Rootbrothers website project"><span class="project-index">03</span></div><div class="project-info"><div><span>CREATIVE / BRAND</span><h3>Rootbrothers</h3></div><span class="project-arrow">↗</span></div></article>
+        <article class="project-card reveal" data-category="creative"><div class="project-image"><img src="church website.PNG" alt="Church website project"><span class="project-index">04</span></div><div class="project-info"><div><span>ORGANIZATION</span><h3>Church Website</h3></div><span class="project-arrow">↗</span></div></article>
+        <article class="project-card project-dark reveal reveal-delay-1" data-category="business"><div class="project-image"><img src="acknom website.PNG" alt="Acknom website project"><span class="project-index">05</span></div><div class="project-info"><div><span>BUSINESS</span><h3>Acknom</h3></div><span class="project-arrow">↗</span></div></article>
       </div>
+    </section>
 
-      <!-- Contact Info -->
-      <div class="footer-section">
-        <h4>Contact Info</h4>
-        <ul class="footer-contact">
-          <li><i class="fas fa-phone"></i> +256 768 082 948</li>
-          <li><i class="fas fa-envelope"></i> brunocoder13@gmail.com</li>
-          <li><i class="fas fa-map-marker-alt"></i> Kampala, Gulu,  Uganda</li>
-        </ul>
-      </div>
+    <section class="showcase section-grid">
+      <div class="showcase-copy reveal"><div class="section-label">04 / THE DEVELOPER</div><h2>DESIGN<br>MEETS<br><span>CODE.</span></h2><p>I don't just make pages look good. I think about structure, speed, accessibility, content hierarchy and what happens after someone clicks.</p><div class="mini-terminal"><span>BRUNO@DEV:~$</span> npm run <b>make-it-better</b><small>✓ responsive build complete</small></div></div>
+      <div class="showcase-photo reveal reveal-delay-1"><img src="hero-dev-laptop.jpg" alt="Bruno coding on his laptop"><div class="photo-caption"><span>BRUNO / DEVELOPER</span><strong>BUILD. SHIP. IMPROVE.</strong></div></div>
+    </section>
 
-      <!-- Newsletter -->
-      <div class="footer-section">
-        <h4>Stay Updated</h4>
-        <p>Subscribe to our newsletter for the latest updates and offers.</p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Enter your email" required>
-          <button type="submit">Subscribe</button>
-        </form>
+    <section class="process section" id="process">
+      <div class="section-head reveal"><div><div class="section-label">05 / HOW IT WORKS</div><h2>FROM IDEA<br>TO <span>LIVE.</span></h2></div><p>No mystery, no endless meetings. A clear build process keeps the project moving and keeps you involved at the right moments.</p></div>
+      <div class="process-line">
+        <article class="process-step reveal"><span>01</span><div class="step-symbol">→</div><h3>Discover</h3><p>We define your audience, goals, content and the result the website must create.</p></article>
+        <article class="process-step reveal reveal-delay-1"><span>02</span><div class="step-symbol">◈</div><h3>Design</h3><p>Structure, visual direction and responsive layouts are shaped before the final polish.</p></article>
+        <article class="process-step reveal reveal-delay-2"><span>03</span><div class="step-symbol">&lt;/&gt;</div><h3>Develop</h3><p>Clean HTML, CSS and JavaScript turn the design into a fast, interactive experience.</p></article>
+        <article class="process-step reveal reveal-delay-3"><span>04</span><div class="step-symbol">↗</div><h3>Launch</h3><p>We test, optimize, connect your domain and put your new digital presence to work.</p></article>
       </div>
-    </div>
+    </section>
 
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <span class="separator">|</span>
-        <a href="#">Terms & Conditions</a>
+    <section class="pricing section" id="pricing">
+      <div class="section-head reveal"><div><div class="section-label">06 / INVESTMENT</div><h2>CHOOSE YOUR<br><span>STARTING POINT.</span></h2></div><p>Every project is custom. These ranges give you a clear idea of where different builds begin.</p></div>
+      <div class="pricing-grid">
+        <article class="price-card reveal"><span class="price-label">STARTER</span><h3>Business Site</h3><div class="price">300K<span>– 700K UGX</span></div><p>For businesses that need a professional online presence that works.</p><ul><li>Up to 5 pages</li><li>Responsive design</li><li>Contact / WhatsApp CTA</li><li>Basic SEO setup</li></ul><a href="#contact" class="button button-ghost">Discuss this build</a></article>
+        <article class="price-card price-featured reveal reveal-delay-1"><div class="popular">MOST REQUESTED</div><span class="price-label">GROWTH</span><h3>Advanced Website</h3><div class="price">700K<span>– 1.5M UGX</span></div><p>For schools, organizations and businesses ready for a stronger digital platform.</p><ul><li>Advanced page structure</li><li>CMS / content workflows</li><li>SEO + performance</li><li>Portal / dashboard options</li></ul><a href="#contact" class="button button-primary">Start a conversation ↗</a></article>
+        <article class="price-card reveal reveal-delay-2"><span class="price-label">CUSTOM</span><h3>Web System</h3><div class="price">QUOTE<span>PROJECT BASED</span></div><p>For custom dashboards, portals, internal systems and ambitious digital products.</p><ul><li>Custom architecture</li><li>Complex workflows</li><li>Database-driven features</li><li>Scalable foundation</li></ul><a href="#contact" class="button button-ghost">Plan a system</a></article>
       </div>
-      <div class="footer-copyright">
-        <p>&copy; 2026 Bruno Development Works. All Rights Reserved.</p>
-      </div>
-    </div>
-  </div>
-</footer>
+    </section>
 
+    <section class="faq section" id="faq">
+      <div class="section-label">07 / QUICK ANSWERS</div><div class="faq-layout"><h2>QUESTIONS?<br><span>GOOD.</span></h2><div class="faq-list">
+        <details class="reveal"><summary>Will the website work properly on phones?</summary><p>Yes. Mobile responsiveness is part of the build, not an extra. Layouts, typography, buttons, images and navigation are designed to adapt from small phones to large desktop screens.</p></details>
+        <details class="reveal"><summary>Can you build more than a normal website?</summary><p>Yes. I also build dashboards, portals and custom web systems where the browser becomes the workspace for your team or customers.</p></details>
+        <details class="reveal"><summary>Can my website be found on Google?</summary><p>The structure can be built with strong technical SEO foundations, clean metadata, semantic HTML, performance optimization and search-friendly content structure.</p></details>
+        <details class="reveal"><summary>How do I start?</summary><p>Send a WhatsApp message or email with what you want to build, your business type and any examples you like. We can then define the best direction and scope.</p></details>
+      </div></div>
+    </section>
+
+    <section class="contact section-grid" id="contact">
+      <div class="contact-copy reveal"><div class="section-label">08 / LET'S BUILD</div><h2>YOUR NEXT<br><span>PROJECT</span><br>STARTS HERE.</h2><p>Have an idea, a business that needs a better website, or a system you want to bring to life? Let's turn it into something people can actually use.</p><div class="contact-links"><a href="https://wa.me/256768082948" target="_blank" rel="noopener"><small>WHATSAPP</small><strong>Chat directly ↗</strong></a><a href="mailto:brunocoder13@gmail.com"><small>EMAIL</small><strong>brunocoder13@gmail.com ↗</strong></a><a href="tel:+256768082948"><small>CALL</small><strong>+256 768 082 948 ↗</strong></a></div></div>
+      <div class="contact-terminal reveal reveal-delay-1"><div class="terminal-top"><span></span><span></span><span></span><b>project-request.form</b></div><form id="projectForm"><label>Name<input name="name" type="text" placeholder="Your name" required></label><label>Project type<select name="type"><option>Business website</option><option>School / organization website</option><option>E-commerce</option><option>Custom web system</option><option>Other</option></select></label><label>What are we building?<textarea name="message" rows="4" placeholder="Tell me a little about the project..." required></textarea></label><button class="button button-primary" type="submit">Send project brief ↗</button><p class="form-note">The button opens WhatsApp with your project brief ready to send.</p></form></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top"><a class="brand" href="#top"><span class="brand-mark">BD<span>/</span>W</span><span class="brand-copy"><strong>BRUNO</strong><small>DEVELOPMENT WORKS</small></span></a><p>Digital products for people who are serious about being seen.</p><a class="back-top" href="#top">Back to top ↑</a></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Bruno Development Works</span><span>Made in Uganda · Built with HTML / CSS / JS</span><span><a href="#services">Services</a> · <a href="#work">Work</a> · <a href="#contact">Contact</a></span></div>
+  </footer>
+
+  <a class="floating-wa" href="https://wa.me/256768082948" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><span>WA</span><b>Let's talk</b></a>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
